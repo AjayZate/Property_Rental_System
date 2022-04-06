@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request
-import jsonify
 import pickle
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 DT = pickle.load(open('DT_Rental_System_Model.pkl', 'rb'))
