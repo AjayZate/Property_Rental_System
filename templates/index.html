@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Rental Prediction</title>
+</head>
+<body>
+
+<form action="{{url_for('predict')}}" method="post">
+    <h3>Enter your Location (Whitefield OR Bommanahalli )</h3>
+    <select id="location" name="Location" required="required">
+        <option value="Whitefield">Whitefield </option>
+        <option value="Bommanahalli">Bommanahalli</option>
+    </select>
+
+    <h3>How much BHK?</h3>
+    <input id="BHK" name="BHK" type="number" required="required">
+
+    <h3>Furnishing status?(0:No, 1:Yes)</h3>
+    <input id="Furnishing" name="Furnishing" type="number" required="required">
+
+    <h3>how many Sq. ft?</h3>
+    <input id="sqft" name="Sq. ft" required="required">
+
+    <h3>How old Property is? (Years)</h3>
+    <input id="old" name="Old" type="number" required="required">
+
+    <h3>No. of floor?</h3>
+    <input id="Floor" name="Floor" type="number" required="required">
+
+    <br><br>
+    <button name="sub" type="submit">Calculate Approximate Monthly rent</button>
+
+</form>
+
+<br><h3>{{prediction_text}}</h3>
+
+</body>
+</html>
